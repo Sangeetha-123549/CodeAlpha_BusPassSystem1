@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ANIMATED BACKGROUND */
+body {
+    min-height: 100vh;
+    color: white;
+    background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0f766e, #1e293b);
+    background-size: 400% 400%;
+    animation: bg 10s ease infinite;
+}
+
+@keyframes bg {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+nav h1 {
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* CENTER CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+/* GLASS CARD */
+.card {
+    width: 100%;
+    max-width: 450px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(56,189,248,0.25);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 50px rgba(99,102,241,0.4);
+}
+
+/* INPUT */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+input::placeholder {
+    color: #cbd5e1;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(135deg, #38bdf8, #6366f1, #22c55e);
+    background-size: 200% 200%;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-position: right center;
+    transform: scale(1.05);
+}
+
+/* HEADINGS */
+h2 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+}

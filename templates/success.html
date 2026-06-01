@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Success</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h1>🚍 BusPass Cloud</h1>
+
+    <div>
+        <a href="/">Home</a>
+        <a href="/book">Book Again</a>
+        <a href="/logout">Logout</a>
+    </div>
+</nav>
+
+<!-- MAIN -->
+<div class="container center">
+
+    <div class="card" style="text-align:center; max-width:450px;">
+
+        <h2>🎉 Booking Successful</h2>
+
+        <p style="margin-top:10px; color:#cbd5e1;">
+            Your ticket has been generated successfully.
+        </p>
+
+        <div style="margin-top:20px;">
+            <h3 style="color:#38bdf8;">Ticket ID</h3>
+            <p style="font-size:18px;">{{ ticket_id }}</p>
+        </div>
+
+        <div style="margin-top:20px;">
+            <h3 style="color:#38bdf8;">Total Price</h3>
+            <p style="font-size:18px;">₹{{ price }}</p>
+        </div>
+
+        <!-- DOWNLOAD BUTTON -->
+        <div style="margin-top:25px;">
+
+            <a href="/download/{{ ticket_id }}">
+                <button>📄 Download Ticket PDF</button>
+            </a>
+
+        </div>
+
+        <!-- EXTRA ACTION -->
+        <div style="margin-top:15px;">
+            <a href="/book" style="color:#38bdf8; text-decoration:none;">
+                Book Another Ticket →
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

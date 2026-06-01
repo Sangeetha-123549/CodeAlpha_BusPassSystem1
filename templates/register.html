@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - Bus Pass</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <h1>🚍 BusPass Cloud</h1>
+    <div>
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+    </div>
+</nav>
+
+<div class="container center">
+
+    <div class="card" style="width:350px;">
+        <h2>Register</h2>
+
+        <form method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+
+            <button type="submit">Create Account</button>
+        </form>
+
+        <p style="margin-top:10px; color:#cbd5e1;">
+            Already have an account? <a href="/login" style="color:#38bdf8;">Login</a>
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
