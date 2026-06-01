@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Book Ticket - Bus Pass</title>
+    <title>Book Ticket</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
 <nav>
     <h1>🚍 BusPass Cloud</h1>
-    <div>
-        <a href="/">Home</a>
-        <a href="/logout">Logout</a>
-    </div>
+    <a href="/logout">Logout</a>
 </nav>
 
 <div class="container center">
 
-    <div class="card" style="width:400px;">
+    <div class="card">
         <h2>Book Ticket</h2>
 
-        <form method="POST">
-            <input type="text" name="source" placeholder="Source Location" required>
+        <form method="POST" action="/book">
+            <input type="text" name="source" placeholder="Source" required>
             <input type="text" name="destination" placeholder="Destination" required>
-            <input type="number" name="tickets" placeholder="Number of Tickets" min="1" required>
+            <input type="number" name="tickets" placeholder="Tickets" required>
 
             <button type="submit">Book Now</button>
         </form>
 
-        <p style="margin-top:10px; color:#cbd5e1;">
-            Price: ₹50 per ticket (Auto calculated)
-        </p>
+        <p>₹50 per ticket</p>
     </div>
 
 </div>
